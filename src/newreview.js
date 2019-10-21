@@ -25,6 +25,7 @@ export default class CreateReview extends React.Component<{}, State> {
     console.log(this.state);
     var ipfs = ipfsClient('ipfs.infura.io', '5001', { protocol: 'https' });
     let ipfsId;
+    console.log('Adding image to IPFS');
     ipfs.add([...this.state.added_file_hash], { progress: (prog) => console.log(`received: ${prog}`) })
       .then((response) => {
         console.log(response);
