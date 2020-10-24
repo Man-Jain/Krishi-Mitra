@@ -10,7 +10,7 @@ contract KrishiMitra{
         uint[] purchases;
     }
     struct sell{
-        address seller;
+       address seller;
        uint productID;
        uint price;
     }
